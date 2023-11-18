@@ -5,7 +5,7 @@ import path from "node:path";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.sendFile(path.join(cwd(), "src", "home.html"));
+  res.sendFile(path.join(cwd(), "views", "home.html"));
 });
 
 export default router;
