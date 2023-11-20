@@ -10,4 +10,8 @@ app.use(express.static(path.join(cwd(), "public")));
 app.use(home);
 app.use(users);
 
+app.use((req, res) => {
+  res.status(404).send("Page Not Found");
+});
+
 app.listen(3000);
